@@ -139,6 +139,21 @@ class LinkedList:
     
     return current
   
+  # return a node at a given index
+  def node_at_index(self, index):
+    if index == 0:
+      return self.head
+    else:
+      current = self.head
+      position = 0
+      
+      while position < index:
+        current = current.next_node
+        position += 1
+        
+      # once the position value equals the index value, current refers to the node we're looking for and return it.
+      return current
+  
   def __repr__(self):
     """
     Returns a string representation of the list
